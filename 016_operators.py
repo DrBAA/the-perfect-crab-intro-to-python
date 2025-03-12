@@ -53,36 +53,144 @@ print(f"2 * 3 = {multiplied} (should be 6)")
 
 # == Subtraction ==
 
-# subtracted = 2 ? 3
-# print(f"2 ? 3 = {subtracted} (should be -1)")
+subtracted = 2 - 3
+print(f"2 - 3 = {subtracted} (should be -1)")
 
-# == Division ==
+# == Regular Division == Regular Division (/): This operator divides two numbers and returns the exact result as a floating-point number. It does not round down the result.
 
-# divided = 2 ? 3
-# print(f"2 ? 3 = {divided} (should be 0.6666666666666666)")
+divided = 2 / 3
+print(f"2 / 3 = {divided} (should be 0.6666666666666666)")
 
 # This kind of 'decimal point' number, 0.6666666666666666 is called a float, by
 # the way, meaning 'floating point'.
 
 # == Modulus == Sometimes known as "remainder if we divide 3 by 2"
 
-# modulus = 3 ? 2
-# print(f"3 ? 2 = {modulus} (should be 1)")
+modulus = 3 % 2
+print(f"3 % 2 = {modulus} (should be 1)")
 
-# == Floor division == Sometimes known as "division without remainder"
+# == Floor division == Sometimes known as "division without remainder" - floor division and integer division are the same. The floor division operator // divides two numbers and rounds down the result to the nearest integer. This means it performs division and then applies the floor function to the result, hence the name "floor division."
 
-# floor_divided = 2 ? 3
-# print(f"2 ? 3 = {floor_divided} (should be 0)")
+floor_divided = 2 // 3
+print(f"2 // 3 = {floor_divided} (should be 0)")
 
 # == Exponentiation == Sometimes known as "2 to the power of 3"
 
-# expr = 2 ? 3
-# print(f"2 ? 3 = {expr} (should be 8)")
+expr = 2 ** 3
+print(f"2 ** 3 = {expr} (should be 8)")
 
 # There are many more operators in Python that you can research. You're very
 # welcome to try out a few below:
 
 # OPERATOR PLAYGROUND STARTS
+
+# Comparison Operators:
+# == : Equal to
+if (4 + 3) == (5+3):
+  print(True)
+else:
+  print(False)
+
+# != : Not equal to
+not_equals_to = 4 != 3
+print (f"4 != 3 = {not_equals_to} (should be true)")
+
+# > : Greater than
+
+# < : Less than
+
+# >= : Greater than or equal to
+
+# <= : Less than or equal to
+
+# Logical Operators:
+# and : Logical AND
+if (4 + 3) == (5+2) and (9-2) == (6+1):
+  print(True)
+
+# or : Logical OR
+if (4 + 3) == (5+2) or (9-2) == (6+1):
+  print(True)
+
+# not : Logical NOT
+if not (4 + 3) == (5+2):
+  print(True)
+else:
+  print("Never")
+
+# Bitwise Operators:
+# & : Bitwise AND
+
+if (4 + 3) & (5+2) == 7:
+  print("VERY TRUE")
+else:
+  print("NOT TRUE")
+
+# | : Bitwise OR
+
+# ^ : Bitwise XOR
+
+# ~ : Bitwise NOT
+
+# << : Left shift
+
+# >> : Right shift
+
+# Assignment Operators:
+# = : Assign
+
+# += : Add and assign
+plus_equals = 4
+plus_equals += 3
+print(f"4 plus 3 = {plus_equals} (should be 7)")
+
+# -= : Subtract and assign
+plus_equals = 4
+plus_equals -= 3
+print(f"4 plus 3 = {plus_equals} (should be 1)")
+
+# *= : Multiply and assign
+plus_equals = 4
+plus_equals *= 3
+print(f"4 plus 3 = {plus_equals} (should be 12)")
+
+# /= : Divide and assign
+plus_equals = 8
+plus_equals /= 2
+print(f"8 divide 2 = {plus_equals} (should be 4)")
+
+# %= : Modulus and assign
+
+# //= : Floor divide and assign
+
+# **= : Exponent and assign
+
+# &= : Bitwise AND and assign
+
+# |= : Bitwise OR and assign
+
+# ^= : Bitwise XOR and assign
+
+# <<= : Left shift and assign
+
+# >>= : Right shift and assign
+
+# Membership Operators:
+# in : Checks if a value is in a sequence
+
+# not in : Checks if a value is not in a sequence
+
+# Identity Operators:
+# is : Checks if two variables refer to the same object
+
+# is not : Checks if two variables do not refer to the same object
+
+
+
+
+
+
+
 
 
 
