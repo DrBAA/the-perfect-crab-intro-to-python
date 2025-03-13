@@ -29,6 +29,7 @@ print(f"The string is {length} characters long")
 # Let's say you wanted to turn this:
 
 "Hello, YOUR_NAME!"
+"Hello, BETH!"
 
 # Into this:
 
@@ -38,46 +39,51 @@ print(f"The string is {length} characters long")
 
 old_string = "Hello, YOUR_NAME!"
 new_string = old_string.replace("YOUR_NAME", "Kay")
+newer_string = old_string.replace("Hello, YOUR_NAME", "Hi Beth")
 
 # Uncomment this next line to see the result:
-# print(new_string)
+print("old string ", old_string)
+print("new string is ", new_string)
+print("newer string is: ", newer_string)
 
-# You'll notice here that the function is coming in a different place. Let's
-# compare `len` and `replace`:
+# # You'll notice here that the function is coming in a different place. Let's
+# # compare `len` and `replace`:
 
 my_string = "hello"
 
 len(my_string)              # <-- Independent Function
-my_string.replace("h", "w") # <-- Method Function
+my_new_string = my_string.replace("h", "w") # <-- Method Function
+print(my_new_string)
 
-# Why the difference? It's a little complicated.
-#
-# What you need to know for now is that some functions come in one style like
-# `len`, and some come in the other style like `replace`. The latter are called
-# 'methods'.
+# # Why the difference? It's a little complicated.
+# #
+# # What you need to know for now is that some functions come in one style like
+# # `len`, and some come in the other style like `replace`. The latter are called
+# # 'methods'.
 
-# == Upper and Lowercase ==
+# # == Upper and Lowercase ==
 
-# When you're doing the Makers assessment, you're quite likely to be asked to do
-# something you've not done before. This is very normal.
+# # When you're doing the Makers assessment, you're quite likely to be asked to do
+# # something you've not done before. This is very normal.
 
-# In an engineering job, and increasingly in any job, you have to get
-# comfortable with looking up how to do things.
+# # In an engineering job, and increasingly in any job, you have to get
+# # comfortable with looking up how to do things.
 
-# We'll practice this here.
+# # We'll practice this here.
 
-# @TASK Complete these exercises:
+# # @TASK Complete these exercises:
 
-# == Exercise One ==
+# # == Exercise One ==
 
-print("")
-print("Function: uppercase")
+# print("")
+# print("Function: uppercase")
 
-# Search for 'python make string uppercase'
+# # Search for 'python make string uppercase'
 
 def make_uppercase(string):
   # Return the string in uppercase
   pass
+  return string.upper()
 
 check_that_these_are_equal(
   make_uppercase("hello"), "HELLO")
@@ -85,7 +91,7 @@ check_that_these_are_equal(
 check_that_these_are_equal(
   make_uppercase("World"), "WORLD")
 
-# == Exercise Two ==
+# # == Exercise Two ==
 
 print("")
 print("Function: lowercase")
@@ -95,6 +101,7 @@ print("Function: lowercase")
 def make_lowercase(string):
   # Return the string in lowercase
   pass
+  return string.lower()
 
 check_that_these_are_equal(
   make_lowercase("HELLO"), "hello")
@@ -102,7 +109,7 @@ check_that_these_are_equal(
 check_that_these_are_equal(
   make_lowercase("World"), "world")
 
-# == Exercise Three ==
+# # == Exercise Three ==
 
 print("")
 print("Function: strip_whitespace")
@@ -111,7 +118,10 @@ print("Function: strip_whitespace")
 
 def strip_whitespace(string):
   # Return the string with any whitespace removed from the start and end
+  # Use python built-in strip() method - looks at your string and checks for any leading (at the start) or trailing (at the end) whitespace, including spaces, tabs (\t), or newline characters (\n).
+  # It’s especially useful in scenarios where the input might have inconsistent spacing—like user inputs, data from files, etc.
   pass
+  return string.strip()
 
 check_that_these_are_equal(
   strip_whitespace("hello "), "hello")
