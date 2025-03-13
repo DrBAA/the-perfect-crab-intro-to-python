@@ -23,19 +23,23 @@ print(my_string)
 my_string = "Forty" + str(2)
 print(my_string)
 
-# There is another way to concatenate strings which is more convenient. They are
-# called f-strings, and are a feature of Python 3 (which is what our IDE uses).
+# # There is another way to concatenate strings which is more convenient. They are
+# # called f-strings, and are a feature of Python 3 (which is what our IDE uses).
 
-# Here's what they look like:
+# # Here's what they look like:
 
 my_name = "Kay"
 print(f"Hello, {my_name}!")
 
-# Note the `f` before the first quote, and the use of `{` and `}` to create
-# space you can put a variable into. In fact, you can put any expression in
-# there:
+my_new_name = my_name.replace("Kay", "Beth ")
+print (f"Hello, {my_new_name.strip()}!")
 
-print(f"Your name is {len(my_name)} characters long")
+# # Note the `f` before the first quote, and the use of `{` and `}` to create
+# # space you can put a variable into. In fact, you can put any expression in
+# # there:
+
+print(f"Your name is {len(my_name)} characters long \n")
+print(f"Your name is {len(my_new_name)} characters long")
 
 # If you're particularly attentive, you might be asking how come Python didn't
 # complain about us concatenating a number with a string. This is because
@@ -54,6 +58,7 @@ print("Function: greet")
 def greet(name):
   # Return the string "Hello, Kay!" where "Kay" is the name provided
   pass
+  return (f"Hello, {name}!") # The return statement in this case takes the input provided to the function (via the parameter name) and uses it to build the output. Essentially, the value you pass into the function gets processed, and the function sends back a result based on that input.
 
 check_that_these_are_equal(
   greet("Chuang-tzu"),
