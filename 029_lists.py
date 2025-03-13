@@ -21,8 +21,11 @@ my_friends = ["Victoria", "Mel", "Melanie", "Emma"]
 
 # @TASK Try making your own here:
 
-your_list = ...
+your_list = ["apples", "bananas", "grapes", "onions"]
 print(your_list)
+print(your_list[2])
+for item in your_list:
+    print("1 " + item)
 
 # @TASK and print it out by running:
 

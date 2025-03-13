@@ -7,7 +7,7 @@ from lib.helpers import check_that_these_are_equal
 my_list = [44, 35, 21, 63]
 my_list[0]   # Evaluates to 44
 my_list[-1]  # Evaluates to 63
-my_list[1:3] # Evaluates to [35, 21]
+my_list[1:3] # Evaluates to [35, 21] - slicing - includes the elements starting at index 1 and stops before index 3. Hence, the result is [35, 21].
 
 # To show you how similar they are, here are some very similar exercises as in
 # the strings material. You may find the exact same code works for strings and
@@ -23,6 +23,7 @@ print("Function: get_first_item")
 
 def get_first_item(the_list):
   # Return the first item of the list
+  return the_list[0]
   pass
 
 check_that_these_are_equal(
@@ -42,6 +43,7 @@ print("Function: get_last_item")
 
 def get_last_item(the_list):
   # Return the last item of the list
+  return the_list[-1]
   pass
 
 check_that_these_are_equal(
@@ -62,6 +64,7 @@ print("Function: get_nth_item")
 def get_nth_item(the_list, n):
   # Return the item of the list at the specified index
   pass
+  return the_list[n]
 
 check_that_these_are_equal(
   get_nth_item(["a", "b", "c", "d", "e"], 3),
@@ -80,6 +83,7 @@ print("Function: get_items_between_one_and_three")
 
 def get_items_between_one_and_three(the_list):
   # Return the section of the list between indexes one and three
+  return the_list[1:3]
   pass
 
 check_that_these_are_equal(
