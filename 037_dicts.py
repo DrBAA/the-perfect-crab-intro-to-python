@@ -17,6 +17,7 @@
 my_dictionary = {
   "String": "A sequence of characters",
   "List": "A sequence of any item",
+  "Dictionary": "A collection of key-value pairs, allowing for quick lookups",
 }
 
 # Note that:
@@ -37,6 +38,14 @@ print("  " + my_dictionary["List"])
 # the code around line 20. Then print out the value below.
 
 print("A Dictionary is:")
-# ...
+print("  " + my_dictionary["Dictionary"])
+
+print("\nContents of the whole Dictionary in JSON format:")
+print(my_dictionary)
+
+print("\nContents of the whole dictionary in a readable format:")
+for key, value in my_dictionary.items():
+    print(f"{key}: {value}")
+
 
 # Once you're done, move on to 038_dict_operations.py
