@@ -12,6 +12,8 @@ from lib.helpers import check_that_these_are_equal
 # In the process, you'll see a few dictionary functions at work, plus the sneaky
 # addition of looping over characters in strings.
 
+# The square brackets [] are used because dictionaries in Python are accessed using keys enclosed in square brackets.
+
 text = "the quick brush jumped over the lazy crab"
 
 # We'll use a dictionary to keep count of the letters we've seen. We'll start
@@ -36,7 +38,7 @@ for letter in text:
     letter_counts[letter] = letter_counts[letter] + 1
 
 # Let's print out the dictionary to see what we've got:
-print(letter_counts)
+print("letter counts = ", letter_counts)
 
 # If you're curious as to why we need to check if the letter is in the
 # dictionary, try uncommenting this code and see what happens:
@@ -62,6 +64,14 @@ print("Function: count_words_by_length")
 
 def count_words_by_length(words):
   pass
+  result = {}  # This will store the counts of words grouped by their length
+  for word in words:
+      length = len(word)  # Find the length of the word
+      if length not in result:
+          result[length] = 1  # Initialize with 1 if the length is not in the dictionary
+      else:
+          result[length] += 1  # Increment the count if the length already exists in the dictionary
+  return result
 
 check_that_these_are_equal(
   count_words_by_length(["hat", "cat", "I", "bird"]),
@@ -72,5 +82,34 @@ check_that_these_are_equal(
   count_words_by_length(["four", "four", "four", "one"]),
   {4: 3, 3: 1}
 )
+
+
+def count_words_by_length(words):
+    result = {}  # The dictionary to store the counts of words grouped by their length.
+                 # Key: Length of the words (e.g., 3 for "cat").
+                 # Value: Number of words with that length.
+
+    for word in words:  # Loop through each word in the input list.
+        length = len(word)  # Calculate the length of the current word (this is the key in the dictionary).
+
+        if length not in result:  # Check if this word length is not already a key in the dictionary.
+            result[length] = 1  # Assign the key (word length) with an initial value of 1.
+                               # This means we've seen one word with this length so far.
+        else:
+            result[length] += 1  # Increment the value (count) for this key because another word of the same length is found.
+
+    return result  # Return the dictionary containing the word lengths as keys and their counts as values.
+
+# Test cases
+check_that_these_are_equal(
+    count_words_by_length(["hat", "cat", "I", "bird"]),
+    {3: 2, 1: 1, 4: 1}  # Expected result: Two words of length 3, one of length 1, one of length 4.
+)
+
+check_that_these_are_equal(
+    count_words_by_length(["four", "four", "four", "one"]),
+    {4: 3, 3: 1}  # Expected result: Three words of length 4, one of length 3.
+)
+
 
 # Once you're done, move on to 039_challenge_1_example.py
