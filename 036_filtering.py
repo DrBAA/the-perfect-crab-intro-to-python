@@ -27,6 +27,48 @@ for age in raw_ages: # We go through each age
 print(raw_ages)
 print(clean_ages)
 
+# filter for even and odd numbers 
+print("A for loop to filter for even and odd numbers")
+odd_and_even_numbers = [32, 35, 50, 44, 40, 17, 15, 20, 1, 23]
+
+odd_numbers = []
+even_numbers = []
+
+for number in odd_and_even_numbers: # We go through each number
+  # We combine a for with an if and else statement to filter odd and even numbers
+  if number % 2 != 0:
+    odd_numbers.append(number)
+  else:
+    even_numbers.append(number)
+
+# Sort the numbers
+print("odd and even numbers are: ", sorted(odd_and_even_numbers))
+print("odd numbers are: ", sorted(odd_numbers))
+print("even numbers are: ", sorted(even_numbers))
+
+
+# FUNCTION TO FILTER ODD AND EVEN NUMBERS
+print("\nFUNCTION TO FILTER ODD AND EVEN NUMBERS")
+
+def filter_odd_and_even_numbers(new_odd_and_even_numbers):
+  odd_numbers = []
+  even_numbers = []
+
+  for number in new_odd_and_even_numbers: # We go through each number
+    # We combine a for with an if and else statement to filter odd and even numbers
+    if number % 2 != 0:
+      odd_numbers.append(number)
+    else:
+      even_numbers.append(number)
+
+ # Sort the numbers
+  print("odd and even numbers are: ", sorted(new_odd_and_even_numbers))
+  print("odd numbers are: ", sorted(odd_numbers))
+  print("even numbers are: ", sorted(even_numbers))
+
+print("CALL THE FUNCTION")
+filter_odd_and_even_numbers([32, 35, 50, 44, 40, 17, 15, 20, 1, 23])
+
 # @TASK: run this program to see what it does.
 
 # @TASK: Complete this exercise.
@@ -37,6 +79,11 @@ print("Function: only_positive_numbers")
 # Return a new list with only the positive numbers
 def only_positive_numbers(numbers):
   pass
+  new_list = []
+  for number in numbers:
+    if number > 0:
+      new_list.append(number)
+  return new_list
 
 check_that_these_are_equal(
   only_positive_numbers([-4, 4, -3, 3]), [4, 3])
