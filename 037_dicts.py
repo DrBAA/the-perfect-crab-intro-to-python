@@ -47,5 +47,12 @@ print("\nContents of the whole dictionary in a readable format:")
 for key, value in my_dictionary.items():
     print(f"{key}: {value}")
 
+print("\nPrint the keys of a dictionary in a readable format:")
+for key in my_dictionary.keys():
+    print(f"{key}")
+
+print("\nPrint the values of a dictionary in a readable format:")
+for value in my_dictionary.values():
+    print(f"{value}")
 
 # Once you're done, move on to 038_dict_operations.py
