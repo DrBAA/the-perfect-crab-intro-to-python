@@ -63,9 +63,8 @@ def find_words_over_15_characters(words_over_10_characters):
   words_at_15_characters_or_less = []
   for word in words_over_10_characters:
     if len(word) > 15:
-      reduce_to_15_characters = word[0:15]
-      shortened_word = reduce_to_15_characters + "..."
-      words_at_15_characters_or_less.append(shortened_word)
+      reduce_to_15_characters = word[0:15] + "..."
+      words_at_15_characters_or_less.append(reduce_to_15_characters)
     else:
       words_at_15_characters_or_less.append(word)
   return words_at_15_characters_or_less
@@ -88,14 +87,14 @@ def find_words_over_15_characters(words_over_10_characters):
 
 # Initially, I did not have this function in the code. the other functions were returning a list of strings which did not match the expected output. 
 # resolved by creating a function that uses string concatenation and join() method to join strings into normal strings separated by a comma instead of a list format
+
+  # The .join() Method: is a built-in string function in Python. It takes an iterable (like a list) and concatenates all its elements into one single string. The key is that the string on which .join() is called acts as the separator between the elements.
+  # In your code, the separator is ", " (a comma followed by a space).
+  # When .join(words_at_15_characters_or_less) is executed, it takes all the strings in the list and places the separator ", " between them
 def string_concatenate(words_at_15_characters_or_less):
-  text = "These words are quite long: "
-  for line in words_at_15_characters_or_less: # We go through lines item by item
-    # Inside this loop, `line` is the individual line
-    text = "These words are quite long: " + ", ".join(words_at_15_characters_or_less)    
-    # text =  text + line # We append the line to our text
-    # # text = text + "\n" # We add an `\n`, which means 'new line'
-  return text
+    normal_string = "These words are quite long: " + ", ".join(words_at_15_characters_or_less)
+    return normal_string
+
 
 check_that_these_are_equal(
   report_long_words([
@@ -125,6 +124,7 @@ check_that_these_are_equal(
   ]),
   "These words are quite long: "
 )
+
 
 # Once you're done, move on to 041_challenge_2_example.py
 
