@@ -35,7 +35,7 @@ more_words = ['I', 'need', 'another', 'five', 'years']
 last_letters = [] # This is our accumulator again
 
 for word in words: # We go through each word
-  last_letter = word[-1] # Get the first letter
+  last_letter = word[-1] # Get the last letter
   # And append it to our accumulator list:
   last_letters.append(last_letter)
 
@@ -50,7 +50,7 @@ more_words = ['I', 'need', 'another', 'five', 'years']
 last_letters_to_uppercase = [] # This is our accumulator again
 
 for word in more_words: # We go through each word
-  last_letter = word[-1] # Get the first letter
+  last_letter = word[-1] # Get the last letter
   upper_case_letter = last_letter.upper()
   # And append it to our accumulator list:
   last_letters_to_uppercase.append(upper_case_letter)
@@ -66,7 +66,7 @@ def change_letter_to_uppercase(more_words):
   last_letters_to_uppercase = [] # This is our accumulator again
 
   for word in more_words: # We go through each word
-    last_letter = word[-1] # Get the first letter
+    last_letter = word[-1] # Get the last letter
     upper_case_letter = last_letter.upper()
     # And append it to our accumulator list:
     last_letters_to_uppercase.append(upper_case_letter)
