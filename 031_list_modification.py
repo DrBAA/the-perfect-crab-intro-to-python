@@ -63,6 +63,15 @@ check_that_these_are_equal(
 check_that_these_are_equal(
   append_item_to_list([3, 1], 6), [3, 1, 6])
 
+print("")
+print("Function: append_item_to_list1")
+
+def append_items_to_list1(the_list1, item1, item2):
+  the_list1.append(item1)
+  the_list1.append(item2)
+  return the_list1
+print("append item to list1", append_items_to_list1(['a', 'b'], 'c', 'd'))
+
 # == Exercise One ==
 
 print("")
