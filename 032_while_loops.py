@@ -87,4 +87,16 @@ check_that_these_are_equal(
 check_that_these_are_equal(
   add_cats_repeatedly(['dogs'], 2), ['dogs', 'cats', 'cats'])
 
+
+
+print("ADD bananas to a list of fruits")
+def add_bananas_repeatedly(fruits_list, count):
+    bananas_added = 0  # Tracks how many "bananas" have been added
+    while bananas_added < count:
+        fruits_list.append("banana")
+        bananas_added += 1  # Increment the counter
+    return fruits_list
+
+print("added bananas: ", add_bananas_repeatedly(["apple", "melons"], 5))
+
 # When you're done, move on to 033_for_loops.py
