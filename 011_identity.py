@@ -14,15 +14,15 @@ def just_return_it(num):
 
 # * A name: `just_return_it` that we can use to call it
 
-# * A parameter: `num` that it takes as input. You might also hear these
-#   informally referred to as 'arguments'
+  # * A parameter: `num` that it takes as input. You might also hear these
+  #   informally referred to as 'arguments'
 
-# * A body: `return num` that processes the input and returns the result as
-#   output. Python uses spaces at the start of each line to indicate what's the
-#   body and what isn't
+  # * A body: `return num` that processes the input and returns the result as
+  #   output. Python uses spaces at the start of each line to indicate what's the
+  #   body and what isn't
 
-# `just_return_it` is a very simple function, it doesn't do very much. It takes
-# a piece of data as input, and returns it as output.
+  # `just_return_it` is a very simple function, it doesn't do very much. It takes
+  # a piece of data as input, and returns it as output.
 
 # We call a function like this:
 

@@ -55,6 +55,102 @@ len(my_string)              # <-- Independent Function
 my_new_string = my_string.replace("h", "w") # <-- Method Function
 print(my_new_string)
 
+# STRING SLICING TO REMOVE A LETTER(S) FROM A STRING
+print("STRING SLICING TO REMOVE A LETTER(S) FROM A STRING")
+sling_to_slice = "Birmingham City"
+sliced_string = sling_to_slice[11:]
+print("sliced_string", sliced_string)
+
+def slice_out_city(keep_birmingham):
+  # keep the word Birmingham 
+  # Find the starting index of "birmingham"
+  start_index = keep_birmingham.lower().find("birmingham")
+
+  # Find the ending index of "birmingham"
+  end_index = start_index + len("birmingham")
+
+  # Slice to extract "birmingham"
+  result = keep_birmingham[start_index:end_index]
+  return result
+
+print("results after slicing out the word city are: ", slice_out_city("Birmingham City"))
+
+
+def slice_out_city(keep_birmingham):
+    # Validate input
+    if not isinstance(keep_birmingham, str) or not keep_birmingham.strip():
+        return "Invalid input: Please provide a non-empty string."
+
+    # Convert string to lowercase and find "birmingham"
+    start_index = keep_birmingham.lower().find("birmingham")
+
+    # Handle case when "birmingham" is not found
+    if start_index == -1:
+        return "The word 'birmingham' is not found in the input."
+
+    # Find the ending index of "birmingham"
+    end_index = start_index + len("birmingham")
+
+    # Slice to extract "birmingham"
+    result = keep_birmingham[start_index:end_index]
+
+    # Return the cleaned result
+    return result.strip()
+
+print("results after slicing out the word city are: ", slice_out_city("London City"))
+
+
+
+def slice_out_city(keep_birmingham):
+    # Validate input
+    if not isinstance(keep_birmingham, str) or not keep_birmingham.strip():
+        return "Invalid input: Please provide a non-empty string."
+
+    # Convert string to lowercase and find "birmingham"
+    start_index = keep_birmingham.lower().find("birmingham")
+
+    # Handle case when "birmingham" is not found
+    if start_index == -1:
+        return "The word 'birmingham' is not found in the input."
+
+    # Find the ending index of "birmingham"
+    end_index = start_index + len("birmingham")
+
+    # Slice to extract "birmingham"
+    result = keep_birmingham[start_index:end_index]
+
+    # Return the cleaned result
+    return result.strip()
+
+print("results after slicing out the word city are: ", slice_out_city(" "))
+
+
+
+
+def slice_out_city(keep_birmingham):
+    # Validate input
+    if not isinstance(keep_birmingham, str) or not keep_birmingham:
+        return "Invalid input: Please provide a non-empty string."
+    
+    # Convert string to lowercase and find "birmingham"
+    start_index = keep_birmingham.lower().find("birmingham")
+
+    # Handle case when "birmingham" is not found
+    if start_index == -1:
+        return "The word 'birmingham' is not found in the input."
+
+    # Find the ending index of "birmingham"
+    end_index = start_index + len("birmingham")
+
+    # Slice to extract "birmingham"
+    result = keep_birmingham[start_index:end_index]
+
+    # Return the cleaned result
+    return result
+
+print("results after slicing out the word city and stripping traling spaces are:", slice_out_city("I am going to Birmingham City"))
+
+
 # # Why the difference? It's a little complicated.
 # #
 # # What you need to know for now is that some functions come in one style like
@@ -119,7 +215,7 @@ print("Function: strip_whitespace")
 def strip_whitespace(string):
   # Return the string with any whitespace removed from the start and end
   # Use python built-in strip() method - looks at your string and checks for any leading (at the start) or trailing (at the end) whitespace, including spaces, tabs (\t), or newline characters (\n).
-  # It’s especially useful in scenarios where the input might have inconsistent spacing—like user inputs, data from files, etc.
+  # It’s especially useful in scenarios where the input might have inconsistent spacing—like user inputs, data from files, etc.'
   pass
   return string.strip()
 

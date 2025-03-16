@@ -31,6 +31,9 @@ print(my_string)
 my_name = "Kay"
 print(f"Hello, {my_name}!")
 
+my_number = 2
+print(f"Hello, {my_name}{my_number}!")
+
 my_new_name = my_name.replace("Kay", "Beth ")
 print (f"Hello, {my_new_name.strip()}!")
 
