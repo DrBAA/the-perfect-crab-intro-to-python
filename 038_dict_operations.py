@@ -14,6 +14,8 @@ from lib.helpers import check_that_these_are_equal
 
 # The square brackets [] are used because dictionaries in Python are accessed using keys enclosed in square brackets.
 
+# This program counts the frequency of each character in a given string, including spaces, and stores the counts in a dictionary. It iterates over the string one character at a time, checking whether the character is already present in the dictionary. If the character is not present, it adds it as a key and initializes its value to 1. If the character is already present, it increments the value by 1. At the end, the dictionary contains each character as a key and the corresponding number of times it appeared in the string as the value. The final result is printed for the user.
+
 text = "the quick brush jumped over the lazy crab"
 
 # We'll use a dictionary to keep count of the letters we've seen. We'll start
@@ -36,9 +38,34 @@ for letter in text:
   else:
     # If it is, we'll increment the count for that letter.
     letter_counts[letter] = letter_counts[letter] + 1
-
+  
 # Let's print out the dictionary to see what we've got:
-print("letter counts = ", letter_counts)
+print("letter counts = ", letter_counts)  
+# output
+# letter counts =
+# {
+#  't': 2, 'h': 3, 'e': 5, ' ': 8, 'q': 1, 'u': 3, 'i': 1, 'c': 3, 'k': 1, 
+#  'b': 2, 'r': 3, 's': 1, 'j': 1, 'm': 1, 'p': 1, 'd': 1, 'o': 1, 'v': 1, 
+#  'l': 1, 'a': 3, 'z': 1, 'y': 1
+# }
+
+
+
+text2 = "the thinnest quick brush jumped over the lazy crab"
+letter_counts2 = {}
+for letter in text2:
+  if letter not in letter_counts2:
+     letter_counts2[letter] = 1
+  else:
+     letter_counts2[letter] = letter_counts2[letter] + 1
+
+print("letter counts2 = ", letter_counts2)
+# output
+# letter counts2 =  {
+#  't': 4, 'h': 3, 'e': 6, ' ': 8, 'i': 1, 'n': 3, 's': 2, 'q': 1, 
+#  'u': 3, 'c': 3, 'k': 1, 'b': 2, 'r': 3, 'j': 1, 'm': 1, 'p': 1, 
+#  'd': 1, 'o': 1, 'v': 1, 'l': 1, 'a': 3, 'z': 1, 'y': 1
+# }
 
 # If you're curious as to why we need to check if the letter is in the
 # dictionary, try uncommenting this code and see what happens:
