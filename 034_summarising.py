@@ -56,7 +56,7 @@ def add_up_numbers(numbers):
   pass
   total = 0  # Initialize a running total
   for number in numbers:
-      total += number  # Add each number to the running total
+      total += number  # total = total plus number - Adds each number to the running total
   return total  # Return the final total
 
 check_that_these_are_equal(
